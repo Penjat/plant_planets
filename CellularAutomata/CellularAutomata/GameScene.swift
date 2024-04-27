@@ -25,7 +25,7 @@ class GameScene: SKScene {
 
     override func didMove(to view: SKView) {
         let w = (self.size.width + self.size.height) * 0.05
-        self.testNode = SKShapeNode.init(circleOfRadius: 12)
+        self.testNode = SKShapeNode.init(circleOfRadius: 6)
         self.centerNode = SKShapeNode.init(circleOfRadius: 8)
         centerNode!.strokeColor = SKColor.yellow
 
@@ -84,38 +84,71 @@ class GameScene: SKScene {
         for t in touches { self.touchUp(atPoint: t.location(in: self)) }
     }
 
+    class Cell {
+        var velocity = CGVector.zero
+    }
 
     override func update(_ currentTime: TimeInterval) {
         let deltaTime = calculateDeltaTime(from: currentTime)
 
-//        print(deltaTime)
-        // Called before each frame is rendered
+        // Constants for attraction and repulsion forces
+        let attractionForce: CGFloat = 0.5
+        let repulsionForce: CGFloat = -100.0
+        let maxDistance: CGFloat = 500.0
+        let minDistance: CGFloat = 50.0
+        let maxSpeed: CGFloat = 20.0
+        let frictionCoefficient: CGFloat = 0.2
+
         for (shapeNode, cell) in nodes {
-            // Calculate the distance to (0, 0)
-            let distanceX = -shapeNode.position.x
-            let distanceY = -shapeNode.position.y
+            for (otherShapeNode, otherCell) in nodes where shapeNode != otherShapeNode {
+                // Calculate the distance between cells
+                let distance = shapeNode.position.distance(to: otherShapeNode.position)
 
-            // Calculate acceleration towards (0, 0)
-            let accelerationX = distanceX * accelerationSpeed
-            let accelerationY = distanceY * accelerationSpeed
+                // Beyond a certain distance, there is no effect
+                if distance > maxDistance {
+                    continue
+                }
 
-            // Update velocity with acceleration scaled by delta time
-            cell.velocity.dx += accelerationX * deltaTime
-            cell.velocity.dy += accelerationY * deltaTime
+                // Calculate the direction of the force
+                let direction = CGVector(dx: otherShapeNode.position.x - shapeNode.position.x,
+                                         dy: otherShapeNode.position.y - shapeNode.position.y)
 
-            // Limit velocity to maxSpeed
-            let speed = hypot(cell.velocity.dx, cell.velocity.dy)
-            if speed > maxSpeed {
-                let scale = maxSpeed / speed
-                cell.velocity.dx *= scale
-                cell.velocity.dy *= scale
+                // Calculate the magnitude of the force
+                var forceMagnitude: CGFloat = 0.0
+                if distance < minDistance {
+                    // Repulsion force
+                    forceMagnitude = repulsionForce * (minDistance - distance)/minDistance
+                } else {
+                    // Attraction force
+                    forceMagnitude = attractionForce * (maxDistance - distance)/maxDistance
+                }
+
+                // Normalize the direction
+                let length = sqrt(direction.dx * direction.dx + direction.dy * direction.dy)
+                let normalizedDirection = CGVector(dx: direction.dx / length, dy: direction.dy / length)
+
+                // Apply force to both cells
+                cell.velocity.dx += normalizedDirection.dx * forceMagnitude * deltaTime
+                cell.velocity.dy += normalizedDirection.dy * forceMagnitude * deltaTime
+                let speed = hypot(cell.velocity.dx, cell.velocity.dy)
+                    if speed > maxSpeed {
+                        let scale = maxSpeed / speed
+                        cell.velocity.dx *= scale
+                        cell.velocity.dy *= scale
+                    }
+
+
+
             }
-
-            // Update position with velocity scaled by delta time
-            shapeNode.position.x += cell.velocity.dx * deltaTime
-            shapeNode.position.y += cell.velocity.dy * deltaTime
+        }
+        for (shapeNode, cell) in nodes {
+            shapeNode.position.x += cell.velocity.dx
+            shapeNode.position.y += cell.velocity.dy
+            cell.velocity.dx *= (1.0 - frictionCoefficient * deltaTime)
+            cell.velocity.dy *= (1.0 - frictionCoefficient * deltaTime)
         }
     }
+
 
     private func calculateDeltaTime(from currentTime: TimeInterval) -> TimeInterval {
         // When the level is started or after the game has been paused, the last update time is reset to the current time.
@@ -132,3 +165,18 @@ class GameScene: SKScene {
         return deltaTime
     }
 }
+
+extension CGPoint {
+    func distance(to point: CGPoint) -> CGFloat {
+        let dx = self.x - point.x
+        let dy = self.y - point.y
+        return sqrt(dx * dx + dy * dy)
+    }
+
+    func normalized() -> CGPoint {
+        let length = sqrt(x * x + y * y)
+        return CGPoint(x: x / length, y: y / length)
+    }
+}
+
+
