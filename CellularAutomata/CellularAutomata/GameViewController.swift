@@ -8,27 +8,47 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import SwiftUI
 
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
-            
-            view.ignoresSiblingOrder = true
-            
-            view.showsFPS = true
-            view.showsNodeCount = true
+
+        // Create a SpriteKit view
+        let skView = SKView(frame: view.frame)
+        skView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(skView)
+
+        // Load the SKScene from 'GameScene.sks'
+        if let scene = SKScene(fileNamed: "GameScene") {
+            // Set the scale mode to scale to fit the window
+            scene.scaleMode = .aspectFill
+
+            // Present the scene
+            skView.presentScene(scene)
+
+            skView.ignoresSiblingOrder = true
+            skView.showsFPS = true
+            skView.showsNodeCount = true
         }
+
+        // Create a SwiftUI view
+        let swiftUIView = SwiftUIOverlayView()
+
+        // Create a UIHostingController to host the SwiftUI view
+        let hostingController = UIHostingController(rootView: swiftUIView)
+        addChild(hostingController)
+        view.addSubview(hostingController.view)
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            hostingController.view.topAnchor.constraint(equalTo: view.topAnchor),
+            hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        hostingController.didMove(toParent: self)
+        
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -41,5 +61,24 @@ class GameViewController: UIViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+}
+
+// SwiftUI Overlay View
+struct SwiftUIOverlayView: View {
+    var body: some View {
+        // You can customize your SwiftUI view here
+        VStack {
+            Text("Hello, SwiftUI!")
+            Button(action: {
+                print("Button tapped")
+            }) {
+                Text("Tap me!")
+            }
+        }
+        .padding()
+//        .background(Color.white.opacity(0.0))
+        .cornerRadius(10)
+        .padding()
     }
 }
