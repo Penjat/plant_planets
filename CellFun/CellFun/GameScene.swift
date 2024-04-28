@@ -16,21 +16,21 @@ class Cell {
 }
 
 class GameScene: SKScene {
-    var appState: AppState!
+    var appState: AppState?
     var lastUpdateTime: TimeInterval = 0
     private var label : SKLabelNode?
     private var testNode: SKShapeNode?
-    private var nodes = [SKShapeNode: Cell]()
+    private var nodes = [(SKShapeNode, Cell)]()
     private var centerNode: SKShapeNode?
 
     var accelerationSpeed: CGFloat = 4.0
-    
+
 
 
 
     override func didMove(to view: SKView) {
-        
-        self.testNode = SKShapeNode.init(circleOfRadius: 6)
+
+        self.testNode = SKShapeNode.init(circleOfRadius: 2)
         self.centerNode = SKShapeNode.init(circleOfRadius: 8)
         centerNode!.strokeColor = SKColor.yellow
 
@@ -38,17 +38,20 @@ class GameScene: SKScene {
         if let testNode = self.testNode {
             testNode.lineWidth = 2.5
 
-            testNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
+//            testNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
 
         }
     }
 
 
     func touchDown(atPoint pos : CGPoint) {
-        if let n = self.testNode?.copy() as! SKShapeNode? {
+        guard let appState else {
+            return
+        }
+        if let n = self.testNode?.copy() as? SKShapeNode {
             n.position = pos
             n.strokeColor = appState.selectedType.skcolor
-            nodes[n] = Cell(type: appState.selectedType)
+            nodes.append((n, Cell(type: appState.selectedType)))
             self.addChild(n)
         }
     }
@@ -95,21 +98,25 @@ class GameScene: SKScene {
         }
     }
 
-    
+
 
     override func update(_ currentTime: TimeInterval) {
         let deltaTime = calculateDeltaTime(from: currentTime)
-
+        guard let appState else {
+            return
+        }
         // Constants for attraction and repulsion forces
-        
-        
+
+
         let maxDistance: CGFloat = 500.0
-        let minDistance: CGFloat = 20.0
-        
-        let frictionCoefficient: CGFloat = 0.2
+        let minDistance: CGFloat = 8.0
+
+        let frictionCoefficient: CGFloat = 0.8
 
         for (shapeNode, cell) in nodes {
             for (otherShapeNode, otherCell) in nodes where shapeNode != otherShapeNode {
+
+                
                 // Calculate the distance between cells
                 let distance = shapeNode.position.distance(to: otherShapeNode.position)
 
@@ -134,7 +141,13 @@ class GameScene: SKScene {
 
                 // Normalize the direction
                 let length = sqrt(direction.dx * direction.dx + direction.dy * direction.dy)
-                let normalizedDirection = CGVector(dx: direction.dx / length, dy: direction.dy / length)
+
+                let normalizedDirection: CGVector
+                if length != 0 {
+                    normalizedDirection = CGVector(dx: direction.dx / length, dy: direction.dy / length)
+                } else {
+                    normalizedDirection = CGVector.zero // Handle the case when length is zero
+                }
 
                 // Apply force to both cells
                 cell.velocity.dx += normalizedDirection.dx * forceMagnitude * deltaTime
@@ -142,9 +155,36 @@ class GameScene: SKScene {
                 let speed = hypot(cell.velocity.dx, cell.velocity.dy)
                 if speed > appState.maxSpeed {
                     let scale = appState.maxSpeed / speed
-                        cell.velocity.dx *= scale
-                        cell.velocity.dy *= scale
-                    }
+                    cell.velocity.dx *= scale
+                    cell.velocity.dy *= scale
+                }
+
+                guard let scene else {
+                    return
+                }
+
+                // Check for collisions with walls and reverse velocity if colliding
+                if shapeNode.position.x <= 50 {
+                    shapeNode.position.x = 50
+                    cell.velocity.dx *= -1
+
+                }
+                if shapeNode.position.x >= scene.size.width - 50 {
+                    shapeNode.position.x = scene.size.width - 50
+                    cell.velocity.dx *= -1
+
+                }
+
+                if shapeNode.position.y <= 100 {
+                    shapeNode.position.y = 100
+                    cell.velocity.dy *= -1
+
+                }
+                if shapeNode.position.y >= scene.size.height - 100 {
+                    shapeNode.position.y = scene.size.height - 100
+                    cell.velocity.dy *= -1
+
+                }
             }
         }
         for (shapeNode, cell) in nodes {

@@ -54,6 +54,14 @@ struct CellAttraction: Hashable {
 
 class CellAttractionModel: ObservableObject {
     @Published var cellAttractionMatrix: [[CellAttraction]] = {
+        CellAttractionModel.createEmptyMatrix()
+    }()
+
+    func resetMatrix() {
+        cellAttractionMatrix = CellAttractionModel.createEmptyMatrix()
+    }
+
+    class func createEmptyMatrix() -> [[CellAttraction]] {
         var array = [[CellAttraction]]()
         for _ in CellType.allCases {
             var row = [CellAttraction]()
@@ -63,5 +71,5 @@ class CellAttractionModel: ObservableObject {
             array.append(row)
         }
         return array
-    }()
+    }
 }

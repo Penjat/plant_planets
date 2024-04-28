@@ -38,7 +38,7 @@ struct ContentView: View {
                         showMenu.toggle()
                     }
 
-                }.padding(40)
+                }.padding(80)
             }.sheet(isPresented: $showMenu) {
                 // Content of the modal view
                 MenuView()

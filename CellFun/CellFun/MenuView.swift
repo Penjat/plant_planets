@@ -49,10 +49,25 @@ struct MenuView: View {
                 }
             }
         }.padding()
-        Slider(value: $selectedSlider, in: -1.0...1.0)
-            .onChange(of: selectedSlider, { oldValue, newValue in
+        Slider(value: $selectedSlider, in: -1.0...1.0) { changed in
             appState.cellAttractionModel.cellAttractionMatrix[selectedIndex.row][selectedIndex.section].attraction = selectedSlider
-        })
+        }.onChange(of: selectedSlider) { newValue in
+            appState.cellAttractionModel.cellAttractionMatrix[selectedIndex.row][selectedIndex.section].attraction = selectedSlider
+        }
+
+
+        Button {
+            appState.cellAttractionModel.resetMatrix()
+        } label: {
+            Text("Clear matrix")
+        }
+
+        Button {
+            
+        } label: {
+            Text("Clear cells")
+        }
+
     }
 }
 
