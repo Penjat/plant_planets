@@ -10,42 +10,32 @@ import SpriteKit
 import GameplayKit
 
 struct ContentView: View {
-    @StateObject var appState = AppState()
-    @State var showMenu = false
+    @EnvironmentObject var appState: AppState
+
     var scene: SKScene {
         let screenSize = UIScreen.main.bounds
-
-            let scene = GameScene()
+        let scene = GameScene()
         scene.appState = appState
         scene.size = CGSize(width: screenSize.width, height: screenSize.height)
-            scene.scaleMode = .fill
-            return scene
-        }
+        scene.scaleMode = .fill
 
-        var body: some View {
-            let screenSize = UIScreen.main.bounds
-            ZStack {
-                SpriteView(scene: scene)
-                    .frame(width: screenSize.width, height: screenSize.height)
-                    .ignoresSafeArea()
-                VStack {
-                    Spacer()
-                    HStack {
+        return scene
+    }
 
-                    }
-                    Button("menu") {
-                        print("button press")
-                        showMenu.toggle()
-                    }
+    var body: some View {
+        let screenSize = UIScreen.main.bounds
+        ZStack {
+            SpriteView(scene: scene)
+                .frame(width: screenSize.width, height: screenSize.height)
+                .ignoresSafeArea()
 
-                }.padding(80)
-            }.sheet(isPresented: $showMenu) {
-                // Content of the modal view
-                MenuView()
-            }.environmentObject(appState)
-        }
+            UIOverlay()
+        }.environmentObject(appState)
+    }
 }
 
 #Preview {
     ContentView()
 }
+
+

@@ -54,7 +54,7 @@ struct CellAttraction: Hashable {
 
 class CellAttractionModel: ObservableObject {
     @Published var cellAttractionMatrix: [[CellAttraction]] = {
-        CellAttractionModel.createEmptyMatrix()
+        CellAttractionModel.createRandomMatrix()
     }()
 
     func resetMatrix() {
@@ -71,5 +71,21 @@ class CellAttractionModel: ObservableObject {
             array.append(row)
         }
         return array
+    }
+
+    class func createRandomMatrix() -> [[CellAttraction]] {
+        var array = [[CellAttraction]]()
+        for _ in CellType.allCases {
+            var row = [CellAttraction]()
+            for _ in CellType.allCases {
+                row.append(CellAttraction(maxDistance: 500, attraction: CGFloat.random(in: -1.0...1.0)))
+            }
+            array.append(row)
+        }
+        return array
+    }
+
+    func randomize() {
+        cellAttractionMatrix = CellAttractionModel.createRandomMatrix()
     }
 }

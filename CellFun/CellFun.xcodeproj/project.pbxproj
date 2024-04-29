@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AC720772BDFD85200575CF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC720762BDFD85200575CF1 /* AppDelegate.swift */; };
+		1AC7207F2BDFD85200575CF1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7207E2BDFD85200575CF1 /* GameViewController.swift */; };
+		1AC720842BDFD85600575CF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AC720832BDFD85600575CF1 /* Assets.xcassets */; };
+		1AC720872BDFD85600575CF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC720852BDFD85600575CF1 /* LaunchScreen.storyboard */; };
+		1AC7208B2BDFD87600575CF1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA9FF42BDD97E8006D3FFA /* GameScene.swift */; };
+		1AC7208C2BDFD87B00575CF1 /* CellAttractionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA9FFA2BDE97C4006D3FFA /* CellAttractionModel.swift */; };
+		1AC7208D2BDFD88000575CF1 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA9FF82BDDA60C006D3FFA /* AppState.swift */; };
+		1AC7208E2BDFD9DE00575CF1 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADAA0092BDF4887006D3FFA /* Cell.swift */; };
+		1AC7208F2BDFDBB900575CF1 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA9FF62BDDA59E006D3FFA /* MenuView.swift */; };
 		1ADA9FE72BDD9680006D3FFA /* CellFunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA9FE62BDD9680006D3FFA /* CellFunApp.swift */; };
 		1ADA9FE92BDD9680006D3FFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA9FE82BDD9680006D3FFA /* ContentView.swift */; };
 		1ADA9FEB2BDD9687006D3FFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ADA9FEA2BDD9687006D3FFA /* Assets.xcassets */; };
@@ -16,6 +25,18 @@
 		1ADA9FF92BDDA60C006D3FFA /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA9FF82BDDA60C006D3FFA /* AppState.swift */; };
 		1ADA9FFB2BDE97C4006D3FFA /* CellAttractionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA9FFA2BDE97C4006D3FFA /* CellAttractionModel.swift */; };
 		1ADAA0032BDEA049006D3FFA /* CellFunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADAA0022BDEA049006D3FFA /* CellFunTests.swift */; };
+		1ADAA00A2BDF4887006D3FFA /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADAA0092BDF4887006D3FFA /* Cell.swift */; };
+		1ADAA00E2BDF5562006D3FFA /* UIOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADAA00D2BDF5562006D3FFA /* UIOverlay.swift */; };
+		1ADAA0302BDF6130006D3FFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADAA02F2BDF6130006D3FFA /* AppDelegate.swift */; };
+		1ADAA0322BDF6130006D3FFA /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1ADAA0312BDF6130006D3FFA /* GameScene.sks */; };
+		1ADAA0342BDF6130006D3FFA /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1ADAA0332BDF6130006D3FFA /* Actions.sks */; };
+		1ADAA0362BDF6130006D3FFA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADAA0352BDF6130006D3FFA /* GameScene.swift */; };
+		1ADAA0382BDF6130006D3FFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADAA0372BDF6130006D3FFA /* ViewController.swift */; };
+		1ADAA03A2BDF6132006D3FFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ADAA0392BDF6132006D3FFA /* Assets.xcassets */; };
+		1ADAA03D2BDF6132006D3FFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADAA03B2BDF6132006D3FFA /* Main.storyboard */; };
+		1ADAA0442BDF62EB006D3FFA /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADAA0092BDF4887006D3FFA /* Cell.swift */; };
+		1ADAA0452BDF62EE006D3FFA /* CellAttractionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA9FFA2BDE97C4006D3FFA /* CellAttractionModel.swift */; };
+		1ADAA0472BDF62F6006D3FFA /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA9FF82BDDA60C006D3FFA /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AC720742BDFD85200575CF1 /* CellFunIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellFunIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AC720762BDFD85200575CF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1AC7207E2BDFD85200575CF1 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		1AC720832BDFD85600575CF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1AC720862BDFD85600575CF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1ADA9FE32BDD9680006D3FFA /* CellFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ADA9FE62BDD9680006D3FFA /* CellFunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFunApp.swift; sourceTree = "<group>"; };
 		1ADA9FE82BDD9680006D3FFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,9 +66,27 @@
 		1ADA9FFA2BDE97C4006D3FFA /* CellAttractionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellAttractionModel.swift; sourceTree = "<group>"; };
 		1ADAA0002BDEA049006D3FFA /* CellFunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CellFunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ADAA0022BDEA049006D3FFA /* CellFunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFunTests.swift; sourceTree = "<group>"; };
+		1ADAA0092BDF4887006D3FFA /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		1ADAA00D2BDF5562006D3FFA /* UIOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIOverlay.swift; sourceTree = "<group>"; };
+		1ADAA02D2BDF6130006D3FFA /* CellFunMacGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellFunMacGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ADAA02F2BDF6130006D3FFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1ADAA0312BDF6130006D3FFA /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		1ADAA0332BDF6130006D3FFA /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		1ADAA0352BDF6130006D3FFA /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		1ADAA0372BDF6130006D3FFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1ADAA0392BDF6132006D3FFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1ADAA03C2BDF6132006D3FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1ADAA03E2BDF6132006D3FFA /* CellFunMacGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CellFunMacGame.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1AC720712BDFD85200575CF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1ADA9FE02BDD9680006D3FFA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,14 +101,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1ADAA02A2BDF6130006D3FFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AC720752BDFD85200575CF1 /* CellFunIOS */ = {
+			isa = PBXGroup;
+			children = (
+				1AC720762BDFD85200575CF1 /* AppDelegate.swift */,
+				1AC7207E2BDFD85200575CF1 /* GameViewController.swift */,
+				1AC720832BDFD85600575CF1 /* Assets.xcassets */,
+				1AC720852BDFD85600575CF1 /* LaunchScreen.storyboard */,
+			);
+			path = CellFunIOS;
+			sourceTree = "<group>";
+		};
 		1ADA9FDA2BDD9680006D3FFA = {
 			isa = PBXGroup;
 			children = (
 				1ADA9FE52BDD9680006D3FFA /* CellFun */,
 				1ADAA0012BDEA049006D3FFA /* CellFunTests */,
+				1ADAA02E2BDF6130006D3FFA /* CellFunMacGame */,
+				1AC720752BDFD85200575CF1 /* CellFunIOS */,
 				1ADA9FE42BDD9680006D3FFA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +138,8 @@
 			children = (
 				1ADA9FE32BDD9680006D3FFA /* CellFun.app */,
 				1ADAA0002BDEA049006D3FFA /* CellFunTests.xctest */,
+				1ADAA02D2BDF6130006D3FFA /* CellFunMacGame.app */,
+				1AC720742BDFD85200575CF1 /* CellFunIOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,7 +149,9 @@
 			children = (
 				1ADA9FE62BDD9680006D3FFA /* CellFunApp.swift */,
 				1ADA9FE82BDD9680006D3FFA /* ContentView.swift */,
+				1ADAA00D2BDF5562006D3FFA /* UIOverlay.swift */,
 				1ADA9FF42BDD97E8006D3FFA /* GameScene.swift */,
+				1ADAA0092BDF4887006D3FFA /* Cell.swift */,
 				1ADA9FFA2BDE97C4006D3FFA /* CellAttractionModel.swift */,
 				1ADA9FF62BDDA59E006D3FFA /* MenuView.swift */,
 				1ADA9FF82BDDA60C006D3FFA /* AppState.swift */,
@@ -109,9 +177,41 @@
 			path = CellFunTests;
 			sourceTree = "<group>";
 		};
+		1ADAA02E2BDF6130006D3FFA /* CellFunMacGame */ = {
+			isa = PBXGroup;
+			children = (
+				1ADAA02F2BDF6130006D3FFA /* AppDelegate.swift */,
+				1ADAA0312BDF6130006D3FFA /* GameScene.sks */,
+				1ADAA0332BDF6130006D3FFA /* Actions.sks */,
+				1ADAA0352BDF6130006D3FFA /* GameScene.swift */,
+				1ADAA0372BDF6130006D3FFA /* ViewController.swift */,
+				1ADAA0392BDF6132006D3FFA /* Assets.xcassets */,
+				1ADAA03B2BDF6132006D3FFA /* Main.storyboard */,
+				1ADAA03E2BDF6132006D3FFA /* CellFunMacGame.entitlements */,
+			);
+			path = CellFunMacGame;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1AC720732BDFD85200575CF1 /* CellFunIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AC7208A2BDFD85600575CF1 /* Build configuration list for PBXNativeTarget "CellFunIOS" */;
+			buildPhases = (
+				1AC720702BDFD85200575CF1 /* Sources */,
+				1AC720712BDFD85200575CF1 /* Frameworks */,
+				1AC720722BDFD85200575CF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CellFunIOS;
+			productName = CellFunIOS;
+			productReference = 1AC720742BDFD85200575CF1 /* CellFunIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		1ADA9FE22BDD9680006D3FFA /* CellFun */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1ADA9FF12BDD9687006D3FFA /* Build configuration list for PBXNativeTarget "CellFun" */;
@@ -147,6 +247,23 @@
 			productReference = 1ADAA0002BDEA049006D3FFA /* CellFunTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		1ADAA02C2BDF6130006D3FFA /* CellFunMacGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ADAA03F2BDF6132006D3FFA /* Build configuration list for PBXNativeTarget "CellFunMacGame" */;
+			buildPhases = (
+				1ADAA0292BDF6130006D3FFA /* Sources */,
+				1ADAA02A2BDF6130006D3FFA /* Frameworks */,
+				1ADAA02B2BDF6130006D3FFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CellFunMacGame;
+			productName = CellFunMacGame;
+			productReference = 1ADAA02D2BDF6130006D3FFA /* CellFunMacGame.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -157,12 +274,18 @@
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
+					1AC720732BDFD85200575CF1 = {
+						CreatedOnToolsVersion = 15.1;
+					};
 					1ADA9FE22BDD9680006D3FFA = {
 						CreatedOnToolsVersion = 15.1;
 					};
 					1ADA9FFF2BDEA049006D3FFA = {
 						CreatedOnToolsVersion = 15.1;
 						TestTargetID = 1ADA9FE22BDD9680006D3FFA;
+					};
+					1ADAA02C2BDF6130006D3FFA = {
+						CreatedOnToolsVersion = 15.1;
 					};
 				};
 			};
@@ -181,11 +304,22 @@
 			targets = (
 				1ADA9FE22BDD9680006D3FFA /* CellFun */,
 				1ADA9FFF2BDEA049006D3FFA /* CellFunTests */,
+				1ADAA02C2BDF6130006D3FFA /* CellFunMacGame */,
+				1AC720732BDFD85200575CF1 /* CellFunIOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1AC720722BDFD85200575CF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AC720842BDFD85600575CF1 /* Assets.xcassets in Resources */,
+				1AC720872BDFD85600575CF1 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1ADA9FE12BDD9680006D3FFA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,15 +336,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1ADAA02B2BDF6130006D3FFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ADAA0322BDF6130006D3FFA /* GameScene.sks in Resources */,
+				1ADAA03A2BDF6132006D3FFA /* Assets.xcassets in Resources */,
+				1ADAA0342BDF6130006D3FFA /* Actions.sks in Resources */,
+				1ADAA03D2BDF6132006D3FFA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1AC720702BDFD85200575CF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AC7208F2BDFDBB900575CF1 /* MenuView.swift in Sources */,
+				1AC7208B2BDFD87600575CF1 /* GameScene.swift in Sources */,
+				1AC7208D2BDFD88000575CF1 /* AppState.swift in Sources */,
+				1AC7207F2BDFD85200575CF1 /* GameViewController.swift in Sources */,
+				1AC7208C2BDFD87B00575CF1 /* CellAttractionModel.swift in Sources */,
+				1AC720772BDFD85200575CF1 /* AppDelegate.swift in Sources */,
+				1AC7208E2BDFD9DE00575CF1 /* Cell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1ADA9FDF2BDD9680006D3FFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1ADA9FFB2BDE97C4006D3FFA /* CellAttractionModel.swift in Sources */,
 				1ADA9FF52BDD97E8006D3FFA /* GameScene.swift in Sources */,
+				1ADAA00E2BDF5562006D3FFA /* UIOverlay.swift in Sources */,
+				1ADAA00A2BDF4887006D3FFA /* Cell.swift in Sources */,
 				1ADA9FF92BDDA60C006D3FFA /* AppState.swift in Sources */,
 				1ADA9FF72BDDA59E006D3FFA /* MenuView.swift in Sources */,
 				1ADA9FE92BDD9680006D3FFA /* ContentView.swift in Sources */,
@@ -226,6 +387,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1ADAA0292BDF6130006D3FFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ADAA0452BDF62EE006D3FFA /* CellAttractionModel.swift in Sources */,
+				1ADAA0472BDF62F6006D3FFA /* AppState.swift in Sources */,
+				1ADAA0382BDF6130006D3FFA /* ViewController.swift in Sources */,
+				1ADAA0442BDF62EB006D3FFA /* Cell.swift in Sources */,
+				1ADAA0362BDF6130006D3FFA /* GameScene.swift in Sources */,
+				1ADAA0302BDF6130006D3FFA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -236,7 +410,82 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		1AC720852BDFD85600575CF1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AC720862BDFD85600575CF1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1ADAA03B2BDF6132006D3FFA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ADAA03C2BDF6132006D3FFA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		1AC720882BDFD85600575CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L688AU9RCV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.superart.CellFunIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1AC720892BDFD85600575CF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L688AU9RCV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.superart.CellFunIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		1ADA9FEF2BDD9687006D3FFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -454,9 +703,76 @@
 			};
 			name = Release;
 		};
+		1ADAA0402BDF6132006D3FFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CellFunMacGame/CellFunMacGame.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L688AU9RCV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.superart.CellFunMacGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1ADAA0412BDF6132006D3FFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CellFunMacGame/CellFunMacGame.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L688AU9RCV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.superart.CellFunMacGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1AC7208A2BDFD85600575CF1 /* Build configuration list for PBXNativeTarget "CellFunIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AC720882BDFD85600575CF1 /* Debug */,
+				1AC720892BDFD85600575CF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1ADA9FDE2BDD9680006D3FFA /* Build configuration list for PBXProject "CellFun" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -480,6 +796,15 @@
 			buildConfigurations = (
 				1ADAA0072BDEA049006D3FFA /* Debug */,
 				1ADAA0082BDEA049006D3FFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ADAA03F2BDF6132006D3FFA /* Build configuration list for PBXNativeTarget "CellFunMacGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ADAA0402BDF6132006D3FFA /* Debug */,
+				1ADAA0412BDF6132006D3FFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

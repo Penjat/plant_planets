@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct MenuView: View {
-    @EnvironmentObject var appState: AppState
+    @ObservedObject var appState: AppState
 //    @State var attractionSlider:
     @State var selectedIndex = IndexPath(row: 0, section: 0)
     @State var selectedSlider = 0.0
@@ -59,21 +59,23 @@ struct MenuView: View {
         Button {
             appState.cellAttractionModel.resetMatrix()
         } label: {
-            Text("Clear matrix")
+            Text("clear matrix")
         }
 
         Button {
-            
+            appState.clearNodes()
         } label: {
-            Text("Clear cells")
+            Text("clear cells")
         }
-
+        Button {
+            appState.cellAttractionModel.randomize()
+        }label: {
+            Text("randomize")
+        }
     }
 }
 
-#Preview {
-    MenuView()
-}
+
 
 
 struct NumberTextField: View {

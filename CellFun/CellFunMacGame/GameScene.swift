@@ -1,8 +1,8 @@
 //
 //  GameScene.swift
-//  CellularAutomata
+//  CellFunMacGame
 //
-//  Created by Spencer Symington on 2024-04-26.
+//  Created by Spencer Symington on 2024-04-28.
 //
 
 import SpriteKit
@@ -14,7 +14,7 @@ class GameScene: SKScene {
     var lastUpdateTime: TimeInterval = 0
     private var label : SKLabelNode?
     private var testNode: SKShapeNode?
-    
+
     private var centerNode: SKShapeNode?
 
     var accelerationSpeed: CGFloat = 4.0
@@ -24,7 +24,7 @@ class GameScene: SKScene {
         self.testNode = SKShapeNode.init(circleOfRadius: 2)
         self.centerNode = SKShapeNode.init(circleOfRadius: 8)
         centerNode!.strokeColor = SKColor.yellow
-        
+
         self.addChild(centerNode!)
         if let testNode = self.testNode {
             testNode.lineWidth = 2.5
@@ -36,9 +36,11 @@ class GameScene: SKScene {
 
 
     func touchDown(atPoint pos : CGPoint) {
+        print("touch down")
         guard let appState else {
             return
         }
+
         if let n = self.testNode?.copy() as? SKShapeNode {
             n.position = pos
             n.strokeColor = appState.selectedType.skcolor
@@ -65,7 +67,7 @@ class GameScene: SKScene {
 
 
 
-    
+
 
 
 
@@ -182,23 +184,31 @@ class GameScene: SKScene {
         return deltaTime
     }
 
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
-        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
+    override func mouseDown(with event: NSEvent) {
+        self.touchDown(atPoint: event.location(in: self))
     }
-
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
+    
+    override func mouseDragged(with event: NSEvent) {
+        self.touchMoved(toPoint: event.location(in: self))
     }
-
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
+    
+    override func mouseUp(with event: NSEvent) {
+        self.touchUp(atPoint: event.location(in: self))
     }
-
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
+    
+    override func keyDown(with event: NSEvent) {
+        switch event.keyCode {
+        case 0x31:
+            if let label = self.label {
+                label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+            }
+        default:
+            print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")
+        }
     }
+    
+    
+    
 }
 
 extension CGPoint {
@@ -213,6 +223,3 @@ extension CGPoint {
         return CGPoint(x: x / length, y: y / length)
     }
 }
-
-
-

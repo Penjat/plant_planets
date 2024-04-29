@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct CellFunApp: App {
+    let appState = AppState()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(appState)
         }
     }
 }
