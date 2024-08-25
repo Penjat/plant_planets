@@ -7,84 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E21CF6FB-C8BF-4FDA-A7DA-694A24DAE451"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CellFun/GameScene.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "update(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E21CF6FB-C8BF-4FDA-A7DA-694A24DAE451 - c9b39301dc3714e6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CellFun.GameScene.update(Swift.Double) -&gt; ()"
-                  moduleName = "CellFun"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ssymington/Dev/Test%20Projects/PlantPlanets/CellFun/CellFun/GameScene.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "120"
-                  endingLineNumber = "120"
-                  offsetFromSymbolStart = "800">
-               </Location>
-               <Location
-                  uuid = "E21CF6FB-C8BF-4FDA-A7DA-694A24DAE451 - c9b39301dc3714c7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CellFun.GameScene.update(Swift.Double) -&gt; ()"
-                  moduleName = "CellFun"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ssymington/Dev/Test%20Projects/PlantPlanets/CellFun/CellFun/GameScene.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "119"
-                  endingLineNumber = "119"
-                  offsetFromSymbolStart = "1344">
-               </Location>
-               <Location
-                  uuid = "E21CF6FB-C8BF-4FDA-A7DA-694A24DAE451 - c9b39301dc3714c7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CellFun.GameScene.update(Swift.Double) -&gt; ()"
-                  moduleName = "CellFun"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ssymington/Dev/Test%20Projects/PlantPlanets/CellFun/CellFun/GameScene.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "119"
-                  endingLineNumber = "119"
-                  offsetFromSymbolStart = "1388">
-               </Location>
-               <Location
-                  uuid = "E21CF6FB-C8BF-4FDA-A7DA-694A24DAE451 - c9b39301dc3714c7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CellFun.GameScene.update(Swift.Double) -&gt; ()"
-                  moduleName = "CellFun"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ssymington/Dev/Test%20Projects/PlantPlanets/CellFun/CellFun/GameScene.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "119"
-                  endingLineNumber = "119"
-                  offsetFromSymbolStart = "1568">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "3DAD9E5B-9630-4EC4-8FFD-2B7BDD9AE5BF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -96,6 +18,53 @@
             endingLineNumber = "13"
             landmarkName = "ContentView"
             landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "3DAD9E5B-9630-4EC4-8FFD-2B7BDD9AE5BF - 16dc3e1889c32cee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CellFun.ContentView.appState.getter : CellFun.AppState"
+                  moduleName = "CellFun"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ssymington/Dev/Test%20Projects/PlantPlanets/CellFun/CellFun/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "3DAD9E5B-9630-4EC4-8FFD-2B7BDD9AE5BF - 3e1b2d2b8c235ceb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CellFun.ContentView.$appState.getter : SwiftUI.EnvironmentObject&lt;CellFun.AppState&gt;.Wrapper"
+                  moduleName = "CellFun"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ssymington/Dev/Test%20Projects/PlantPlanets/CellFun/CellFun/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "3DAD9E5B-9630-4EC4-8FFD-2B7BDD9AE5BF - 59ae12fd23cde904"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 0 of CellFun.ContentView.init(appState: SwiftUI.EnvironmentObject&lt;CellFun.AppState&gt;) -&gt; CellFun.ContentView"
+                  moduleName = "CellFun"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ssymington/Dev/Test%20Projects/PlantPlanets/CellFun/CellFun/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

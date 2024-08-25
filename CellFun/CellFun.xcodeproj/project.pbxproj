@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A6B01072BE04EFC00380238 /* CellAttractionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA9FFA2BDE97C4006D3FFA /* CellAttractionModel.swift */; };
+		1A6B01082BE04F0000380238 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADAA0092BDF4887006D3FFA /* Cell.swift */; };
+		1A6B010A2BE0898000380238 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B01092BE0898000380238 /* SideMenu.swift */; };
 		1AC720772BDFD85200575CF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC720762BDFD85200575CF1 /* AppDelegate.swift */; };
 		1AC7207F2BDFD85200575CF1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7207E2BDFD85200575CF1 /* GameViewController.swift */; };
 		1AC720842BDFD85600575CF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AC720832BDFD85600575CF1 /* Assets.xcassets */; };
@@ -50,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A6B01092BE0898000380238 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		1AC720742BDFD85200575CF1 /* CellFunIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellFunIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AC720762BDFD85200575CF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AC7207E2BDFD85200575CF1 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 				1ADAA0332BDF6130006D3FFA /* Actions.sks */,
 				1ADAA0352BDF6130006D3FFA /* GameScene.swift */,
 				1ADAA0372BDF6130006D3FFA /* ViewController.swift */,
+				1A6B01092BE0898000380238 /* SideMenu.swift */,
 				1ADAA0392BDF6132006D3FFA /* Assets.xcassets */,
 				1ADAA03B2BDF6132006D3FFA /* Main.storyboard */,
 				1ADAA03E2BDF6132006D3FFA /* CellFunMacGame.entitlements */,
@@ -383,7 +388,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A6B01072BE04EFC00380238 /* CellAttractionModel.swift in Sources */,
 				1ADAA0032BDEA049006D3FFA /* CellFunTests.swift in Sources */,
+				1A6B01082BE04F0000380238 /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +401,7 @@
 				1ADAA0452BDF62EE006D3FFA /* CellAttractionModel.swift in Sources */,
 				1ADAA0472BDF62F6006D3FFA /* AppState.swift in Sources */,
 				1ADAA0382BDF6130006D3FFA /* ViewController.swift in Sources */,
+				1A6B010A2BE0898000380238 /* SideMenu.swift in Sources */,
 				1ADAA0442BDF62EB006D3FFA /* Cell.swift in Sources */,
 				1ADAA0362BDF6130006D3FFA /* GameScene.swift in Sources */,
 				1ADAA0302BDF6130006D3FFA /* AppDelegate.swift in Sources */,

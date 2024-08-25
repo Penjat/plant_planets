@@ -28,7 +28,7 @@ struct UIOverlay: View {
         .padding(100)
         .sheet(isPresented: $showMenu) {
             // Content of the modal view
-            MenuView()
+            MenuView(appState: appState)
         }
     }
 }

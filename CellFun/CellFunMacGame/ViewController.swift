@@ -20,7 +20,7 @@ class ViewController: NSViewController {
             let screenSize = NSScreen.main?.frame ?? CGRect.zero
             let scene = GameScene()
             scene.appState = appState
-            scene.size = CGSize(width: screenSize.width, height: screenSize.height)
+            scene.size = CGSize(width: screenSize.width-200, height: screenSize.height)
             scene.scaleMode = .fill
 
             scene.scaleMode = .aspectFill
@@ -30,6 +30,10 @@ class ViewController: NSViewController {
             view.showsFPS = true
             view.showsNodeCount = true
         }
+
+
+        let sideMenuWindowController = SideMenuWindowController(appState: appState)
+        sideMenuWindowController.showWindow(nil)
     }
 }
 
