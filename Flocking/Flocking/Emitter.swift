@@ -84,7 +84,8 @@ struct Emitter {
         for i in 0..<numberOfCells {
             let xPosition = random(Int(size.width))
             let yPosition = random(Int(size.height))
-            createCell(x: xPosition, y: yPosition, type: , options: BoidType.allCases.randomElement().ra)
+//            TODO: Fix This
+//            createCell(x: xPosition, y: yPosition, type: BoidType.allCases.randomElement(), options: )
         }
     }
 

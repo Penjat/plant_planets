@@ -11,7 +11,7 @@ struct ContentView: View {
             options.commandSubject.send(.createCell(position: point))
             print(point)
         }
-      SlidersView(options: options)
+        SlidersView(options: options)
     }
     .padding()
     .frame(minWidth: 800)
