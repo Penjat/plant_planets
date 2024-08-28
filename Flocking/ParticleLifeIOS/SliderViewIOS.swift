@@ -26,13 +26,13 @@ struct SlidersViewIOS: View {
                     GridRow {
                         Rectangle().fill(.clear).frame(width: 10, height: 10)
                         ForEach(0..<6) { colorIndex in
-                            Rectangle().fill(BoidType(rawValue: Int32(colorIndex))?.color  ?? .gray).frame(width: 10, height: 10)
+                            Rectangle().fill(CellType(rawValue: Int32(colorIndex))?.color  ?? .gray).frame(width: 10, height: 10)
                         }
                     }
 
                     ForEach(0..<6) { rowIndex in
                         GridRow {
-                            Rectangle().fill(BoidType(rawValue: Int32(rowIndex))?.color ?? .gray).frame(width: 10, height: 10)
+                            Rectangle().fill(CellType(rawValue: Int32(rowIndex))?.color ?? .gray).frame(width: 10, height: 10)
                             ForEach(0..<6) { colIndex in
 
                                 let string = String(format: "%.2f", options.getValueFromMatrix(row: rowIndex, col:colIndex)*10000)

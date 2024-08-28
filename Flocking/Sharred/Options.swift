@@ -27,7 +27,7 @@ class Options {
     var particleCount: Int = 1
     var particleSize: Float = 4
     var attraction_matrix: [Float] = Array(repeating: 0.0, count: 36)
-    var selectedType = BoidType.red
+    var selectedType = CellType.red
     var friction: Float = 0.99
 
     let commandSubject = PassthroughSubject<Command, Never>()

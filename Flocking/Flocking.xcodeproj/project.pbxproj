@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0B70F5DC2C7BC9F50021FF15 /* SliderViewIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70F5DA2C7BC9D70021FF15 /* SliderViewIOS.swift */; };
 		0B70F5DE2C7BCAC90021FF15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70F5DD2C7BCAC90021FF15 /* ContentView.swift */; };
+		1A549AEB2C7BD92D0027399F /* CellColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A549AEA2C7BD92D0027399F /* CellColorPicker.swift */; };
+		1A549AED2C7BDBCF0027399F /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A549AEC2C7BDBCF0027399F /* CellType.swift */; };
 		1AF3B0742C06A2A90060DB3B /* IndexDude.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF3B0732C06A2A90060DB3B /* IndexDude.swift */; };
 		1AF3B07C2C06A38A0060DB3B /* ParticleLifeIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF3B07B2C06A38A0060DB3B /* ParticleLifeIOSApp.swift */; };
 		1AF3B0802C06A3900060DB3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AF3B07F2C06A3900060DB3B /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		0B70F5DA2C7BC9D70021FF15 /* SliderViewIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewIOS.swift; sourceTree = "<group>"; };
 		0B70F5DD2C7BCAC90021FF15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1A549AEA2C7BD92D0027399F /* CellColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellColorPicker.swift; sourceTree = "<group>"; };
+		1A549AEC2C7BDBCF0027399F /* CellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellType.swift; sourceTree = "<group>"; };
 		1AF3B0732C06A2A90060DB3B /* IndexDude.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexDude.swift; sourceTree = "<group>"; };
 		1AF3B0792C06A38A0060DB3B /* ParticleLifeIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParticleLifeIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF3B07B2C06A38A0060DB3B /* ParticleLifeIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleLifeIOSApp.swift; sourceTree = "<group>"; };
@@ -79,11 +83,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A549AE92C7BD8590027399F /* Sharred */ = {
+			isa = PBXGroup;
+			children = (
+				82CFF46C2AC6427B00A37420 /* Emitter.swift */,
+				1A549AEC2C7BDBCF0027399F /* CellType.swift */,
+				822EF52C2AA866FF008CC2C8 /* Utility */,
+				824770FF2AA80C930095AB72 /* MetalView.swift */,
+				82E5D2802ABC31B4000D3F89 /* Options.swift */,
+			);
+			path = Sharred;
+			sourceTree = "<group>";
+		};
 		1AF3B07A2C06A38A0060DB3B /* ParticleLifeIOS */ = {
 			isa = PBXGroup;
 			children = (
 				1AF3B07B2C06A38A0060DB3B /* ParticleLifeIOSApp.swift */,
 				0B70F5DD2C7BCAC90021FF15 /* ContentView.swift */,
+				0B70F5DA2C7BC9D70021FF15 /* SliderViewIOS.swift */,
+				1A549AEA2C7BD92D0027399F /* CellColorPicker.swift */,
 				1AF3B07F2C06A3900060DB3B /* Assets.xcassets */,
 				1AF3B0812C06A3900060DB3B /* Preview Content */,
 			);
@@ -110,6 +128,7 @@
 		824770D72AA7FA0B0095AB72 = {
 			isa = PBXGroup;
 			children = (
+				1A549AE92C7BD8590027399F /* Sharred */,
 				824770E22AA7FA0B0095AB72 /* Flocking */,
 				1AF3B07A2C06A38A0060DB3B /* ParticleLifeIOS */,
 				824770E12AA7FA0B0095AB72 /* Products */,
@@ -129,13 +148,11 @@
 			isa = PBXGroup;
 			children = (
 				82CFF46E2AC642C200A37420 /* Flocking.metal */,
-				82CFF46C2AC6427B00A37420 /* Emitter.swift */,
 				822EF5322AA869E4008CC2C8 /* Common.h */,
 				820028392AE5EF7A003BAEE5 /* Helper.h */,
 				8200283A2AE5EF81003BAEE5 /* Helper.metal */,
 				824770F62AA7FDDA0095AB72 /* Renderer.swift */,
 				824770E32AA7FA0B0095AB72 /* FlockingApp.swift */,
-				822EF52C2AA866FF008CC2C8 /* Utility */,
 				82A254542AA83E870054837F /* SwiftUI Views */,
 				824770E72AA7FA0C0095AB72 /* Assets.xcassets */,
 				824770E92AA7FA0C0095AB72 /* Flocking.entitlements */,
@@ -156,10 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				824770E52AA7FA0B0095AB72 /* ContentView.swift */,
-				824770FF2AA80C930095AB72 /* MetalView.swift */,
-				82E5D2802ABC31B4000D3F89 /* Options.swift */,
 				820028342AE5E080003BAEE5 /* SlidersView.swift */,
-				0B70F5DA2C7BC9D70021FF15 /* SliderViewIOS.swift */,
 			);
 			path = "SwiftUI Views";
 			sourceTree = "<group>";
@@ -292,11 +306,13 @@
 				0B70F5DE2C7BCAC90021FF15 /* ContentView.swift in Sources */,
 				1AF3B0872C06A3BD0060DB3B /* Flocking.metal in Sources */,
 				1AF3B0882C06A3C50060DB3B /* Options.swift in Sources */,
+				1A549AED2C7BDBCF0027399F /* CellType.swift in Sources */,
 				1AF3B08E2C06A3D90060DB3B /* Helper.metal in Sources */,
 				1AF3B08A2C06A3C50060DB3B /* MetalView.swift in Sources */,
 				1AF3B07C2C06A38A0060DB3B /* ParticleLifeIOSApp.swift in Sources */,
 				1AF3B08C2C06A3CA0060DB3B /* IndexDude.swift in Sources */,
 				1AF3B08F2C06A3EB0060DB3B /* Emitter.swift in Sources */,
+				1A549AEB2C7BD92D0027399F /* CellColorPicker.swift in Sources */,
 				1AF3B08B2C06A3CA0060DB3B /* MathLibrary.swift in Sources */,
 				0B70F5DC2C7BC9F50021FF15 /* SliderViewIOS.swift in Sources */,
 			);
@@ -328,26 +344,27 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ParticleLifeIOS/Preview Content\"";
-				DEVELOPMENT_TEAM = L688AU9RCV;
+				DEVELOPMENT_TEAM = 8PD973N6JY;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.superart.ParticleLifeIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.penjat.ParticleLifeIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -360,26 +377,27 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ParticleLifeIOS/Preview Content\"";
-				DEVELOPMENT_TEAM = L688AU9RCV;
+				DEVELOPMENT_TEAM = 8PD973N6JY;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.superart.ParticleLifeIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.penjat.ParticleLifeIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -512,6 +530,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Flocking/Flocking.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -537,6 +556,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = penajt.Flocking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -551,6 +571,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Flocking/Flocking.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -576,6 +597,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = penajt.Flocking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
